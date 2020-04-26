@@ -2,24 +2,16 @@ class Solution {
 public:
     string removeVowels(string S) {
         
-        string result;
-        int length = S.length();
-        set<char> store;
-        store = {'a','e','i','o','u'};
-        
-        for(int i = 0; i<length; i++){
+        for(auto itr = S.begin(); itr != S.end(); itr++){
             
-            auto index = store.find(S[i]);
-            if(index == store.end()){
+            if(*itr == 'a' || *itr == 'e' || *itr == 'i' || *itr == 'o' || *itr == 'u' ){
                 
-                result.push_back(S[i]);
-            }else{
-                
-                // Do nothing
+                S.erase(itr);
+                itr--;
             }
+            
+            
         }
-    
-        
-        return result;
+        return S;
     }
 };
