@@ -6,6 +6,7 @@ public:
         int length = S.length();
         set<char> store;
         store = {'a','e','i','o','u'};
+        // tested
         
         for(int i = 0; i<length; i++){
             
